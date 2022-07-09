@@ -21,8 +21,8 @@ file.close()
 servers = ["1", "2", "3"]
 
 for i in range(0,3):
-    json_object[server[i]] = sys.argv[i + 1]
-    print("Just set " , server[i])
+    json_object[servers[i]] = sys.argv[i + 1]
+    print("Just set " , servers[i])
 
 file = open(file_path, "w")
 json.dump(json_object, file, indent=4)
