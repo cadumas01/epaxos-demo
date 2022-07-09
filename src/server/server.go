@@ -6,7 +6,6 @@ import (
 	"flag"
 	"fmt"
 	"gpaxos"
-	"gus"
 	"log"
 	"masterproto"
 	"mencius"
@@ -61,9 +60,7 @@ func main() {
 	replicaId, nodeList := registerWithMaster(fmt.Sprintf("%s:%d", *masterAddr, *masterPort))
 
 	if *doGus {
-		log.Println("Starting Gus replica...")
-		rep := gus.NewReplica(replicaId, nodeList, *thrifty, *exec, *dreply, *durable)
-		rpc.Register(rep)
+		log.Println("Gus is unavailable in this version.")
 	} else if *doFastpaxos {
 		log.Println("Starting Fast Paxos replica...")
 		rep := fastpaxos.NewReplica(replicaId, nodeList, *thrifty, *exec, *dreply, *durable)
