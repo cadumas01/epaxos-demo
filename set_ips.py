@@ -22,25 +22,24 @@ def update(file_path, key, new_value):
     file.close()
 
 
-if __name__ == "main.json":
-    print("Called set_ips.py")
-    if len(os.args) != 4:
-        print("Usage: python3 set_ips <INTERNAL_IP_CALIFORNIA> <INTERNAL_IP_VIRGINIA> <INTERNAL_IP_IRELAND>")
-        exit(1)
+print("Called set_ips.py")
+if len(os.args) != 4:
+    print("Usage: python3 set_ips <INTERNAL_IP_CALIFORNIA> <INTERNAL_IP_VIRGINIA> <INTERNAL_IP_IRELAND>")
+    exit(1)
 
-    file = open(file_path, "r+")
-    json_object = json.load(file)
-    file.close()
+file = open(file_path, "r+")
+json_object = json.load(file)
+file.close()
 
-    servers = ["1", "2", "3"]
+servers = ["1", "2", "3"]
 
-    for i in range(0,3):
-        json_object[server[i]] = os.args[i + 1]
-        print("Just set " , server[i])
-  
+for i in range(0,3):
+    json_object[server[i]] = os.args[i + 1]
+    print("Just set " , server[i])
 
-    file = open(file_path, "w")
-    json.dump(json_object, file, indent=4)
 
-    file.close()
-    
+file = open(file_path, "w")
+json.dump(json_object, file, indent=4)
+
+file.close()
+
