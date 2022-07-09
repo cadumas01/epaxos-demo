@@ -23,6 +23,7 @@ import json
 import numpy as np
 from os import path
 import statistics
+import pprint
 
 def get_metrics(dirname):
     """
@@ -138,5 +139,6 @@ if __name__ == '__main__':
     files are stored on the remote client machines. Logs the metrics to stdout
     in json format.
     """
+    pp = pprint.PrettyPrinter(indent=4)
     #print(json.dumps(get_metrics(path.expanduser('/Users/tsengle/GolandProjects/gus-epaxos/'))))
-    print(json.dumps(get_metrics(path.expanduser('/root/go/src/gus-epaxos/'))))
+    pp.pprint(json.dumps(get_metrics(path.expanduser('/root/go/src/epaxos-demo/'))))
