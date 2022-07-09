@@ -23,7 +23,7 @@ def update(file_path, key, new_value):
 
 
 print("Called set_ips.py")
-if len(os.args) != 4:
+if len(sys.args) != 4:
     print("Usage: python3 set_ips <INTERNAL_IP_CALIFORNIA> <INTERNAL_IP_VIRGINIA> <INTERNAL_IP_IRELAND>")
     exit(1)
 
