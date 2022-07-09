@@ -14,6 +14,7 @@ if __name__ == "__main__":
         usage()
 
     command = "bin/master -N 3 & bin/server -maddr={} -addr={} -gus=false -e=true -exec=true -dreply=true &"
+    if sys.argv[0] == "1":
         os.system(command.format( ips["0"], ips["0"] ))
     elif  sys.argv[1] == "1":
         os.system(command.format( ips["0"], ips["1"] ))
