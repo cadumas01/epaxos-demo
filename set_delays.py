@@ -9,7 +9,7 @@ if __name__ == "__main__":
     file = open(file_path, "r+")
     ips = json.load(file)    
 
-    if len(sys.args) != 2 :
+    if len(sys.argv) != 2 :
         usage()
 
     command = "sudo tc qdisc del dev ens4 root; sudo tc qdisc add dev ens4 root handle 1: htb; sudo tc class add dev ens4 parent 1: classid 1:1 htb rate 1gibps; sudo tc class add dev ens4 parent 1:1 classid 1:2 htb rate 1gibps; sudo tc qdisc add dev ens4 handle 2: parent 1:2 netem delay {}ms sudo tc filter add dev  ens4 pref 2 protocol ip u32 match ip dst {} flowid 1:2; sudo tc class add dev ens4 parent 1: classid 1:1 htb rate 1gibps; sudo tc class add dev ens4 parent 1:1 classid 1:3 htb rate 1gibps; sudo tc qdisc add dev ens4 handle 3: parent 1:3 netem delay {}ms sudo tc filter add dev  ens4 pref 3 protocol ip u32 match ip dst {} flowid 1:3;"    
