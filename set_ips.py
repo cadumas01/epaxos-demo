@@ -34,7 +34,8 @@ if __name__ == "main.json":
     servers = ["1", "2", "3"]
 
     for i in range(0,3):
-        json_object[server[i]] = os.args[i]
+        json_object[server[i]] = os.args[i + 1]
+        print("Just set " , server[i])
   
 
     file = open(file_path, "w")
