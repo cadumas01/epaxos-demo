@@ -18,7 +18,7 @@ file = open(file_path, "r+")
 json_object = json.load(file)
 file.close()
 
-servers = ["1", "2", "3"]
+servers = ["0", "1", "2"]
 
 for i in range(0,3):
     json_object[servers[i]] = sys.argv[i + 1]
