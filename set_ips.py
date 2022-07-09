@@ -37,7 +37,7 @@ for i in range(0,3):
     json_object[server[i]] = sys.argv[i + 1]
     print("Just set " , server[i])
 
-
+file_path = "ips.json"
 file = open(file_path, "w")
 json.dump(json_object, file, indent=4)
 
