@@ -23,7 +23,7 @@ def update(file_path, key, new_value):
 
 
 print("Called set_ips.py")
-if len(sys.args) != 4:
+if len(sys.argv) != 4:
     print("Usage: python3 set_ips <INTERNAL_IP_CALIFORNIA> <INTERNAL_IP_VIRGINIA> <INTERNAL_IP_IRELAND>")
     exit(1)
 
@@ -34,7 +34,7 @@ file.close()
 servers = ["1", "2", "3"]
 
 for i in range(0,3):
-    json_object[server[i]] = os.args[i + 1]
+    json_object[server[i]] = sys.argv[i + 1]
     print("Just set " , server[i])
 
 

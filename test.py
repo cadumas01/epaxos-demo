@@ -4,10 +4,10 @@ def usage():
     print("Usage: python3 test.py WRITE_PERC CONFLICT_RATE TOTAL_NUMBER_CLIENTS")
 
 if __name__ == "__main__":
-    if len(sys.args) != 4:
+    if len(sys.argv) != 4:
         usage()
 
-    args = sys.args
+    args = sys.argsv
     command = "timeout 180s bin/client"
 
     file = open(file_path, "r+")
