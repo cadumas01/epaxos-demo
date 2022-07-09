@@ -19,4 +19,4 @@ if __name__ == "__main__":
     command += " -T="+args[3]+" -forceLeader=0"
 
     os.system(command)   
-    os.system(python3 client_metrics.py)
+    os.system("python3 client_metrics.py")
