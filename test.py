@@ -9,6 +9,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         usage()
 
+    file_path = "ips.json"
     args = sys.argv
     command = "timeout 180s bin/client"
 
