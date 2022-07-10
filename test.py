@@ -9,7 +9,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         usage()
 
-    args = sys.argsv
+    args = sys.argv
     command = "timeout 180s bin/client"
 
     file = open(file_path, "r+")
@@ -18,7 +18,7 @@ if __name__ == "__main__":
     command += " -maddr="+ips["0"]
     command += " -writes="+ args[1]
     command += " -c="+args[2]
-    command += " -T="+args[3]+" -forceLeader=0"
+    command += " -T="+args[3]
 
     os.system(command)   
-    os.system("python3 client_metrics.py")
+    #os.system("python3 client_metrics.py")
