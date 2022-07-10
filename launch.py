@@ -10,7 +10,7 @@ if __name__ == "__main__":
     file = open(file_path, "r+")
     ips = json.load(file)    
 
-    if len(sys.argv) < 2 || len(sys.argv) > 3 :
+    if len(sys.argv) < 2 or len(sys.argv) > 3 :
         usage()
 
     
