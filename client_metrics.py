@@ -143,4 +143,4 @@ if __name__ == '__main__':
     print("Pretty printing")
     pp = pprint.PrettyPrinter(indent=4)
     #print(json.dumps(get_metrics(path.expanduser('/Users/tsengle/GolandProjects/gus-epaxos/'))))
-    pp.pprint(json.dumps(get_metrics(path.expanduser('/root/go/src/epaxos-demo/'))))
+    pp.pprint((get_metrics(path.expanduser('/root/go/src/epaxos-demo/'))))
