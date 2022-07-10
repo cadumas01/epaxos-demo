@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     
     command = ""
-    if len(sys.argv == 3 ) and sys.argv[2].lower() == "true":
+    if len(sys.argv) == 3  and sys.argv[2].lower() == "true":
          command = "bin/master {} & bin/server -maddr={} -addr={} -gus=false -exec=true {} &"
     else:
         command = "bin/master {} & bin/server -maddr={} -addr={} -gus=false -e=true -exec=true {} &"
